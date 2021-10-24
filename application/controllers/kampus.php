@@ -16,11 +16,11 @@ class Kampus extends CI_Controller{
 	function tambah() {
 		$this->load->view('input_data');
 	}
-
+	
 	function tambah_aksi() {
-		$this->form_validation->set_rules('nim', 'NIM', 'requere|min_length[8]|max_length[8]');
+		$this->form_validation->set_rules('nim', 'NIM', 'requered|min_length[8]|max_length[8]');
 		$this->form_validation->set_rules('nama', 'Nama', 'requuered|alpha|min_length[5]|max_length[15]');
-		$this->form_validation->set_rules('alamat', 'Alamat', 'requed|alpha');
+		$this->form_validation->set_rules('alamat', 'Alamat', 'requerd|alpha');
 		$this->form_validation->set_rules('pekerjaan', 'Pekerjaan','requered|alpha');
 
 		if($this->form_validation->run() == TRUE)
